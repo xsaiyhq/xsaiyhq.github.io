@@ -1,0 +1,556 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="XuShenao" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="XuShenao" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="XuShenao" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="http://example.com/2021/11/10/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">
+
+
+
+  <title>
+flex弹性布局 |
+Eternal God = XuShenao</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">flex弹性布局
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2021-11-10 19:52:59">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-11-10T19:52:59+08:00">2021-11-10</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Eternal God</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclwrdwyaj20zk0m8are.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciukx8a7j20zk0m8aio.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeyonbf9j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/10/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar1.jpg">
+    <meta itemprop="name" content="许申奥">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="XuShenao">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="Flex弹性布局"><a href="#Flex弹性布局" class="headerlink" title="Flex弹性布局"></a>Flex弹性布局</h1><h2 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h2><p>取值：row(默认) | row-reverse | column | column-reverse</p>
+<p>用于控制项目排列方向与顺序，默认row，即横向排列，项目排列顺序为正序1-2-3；row-reverse同为横向排列，但项目顺序为倒序3-2-1。</p>
+<p>column 与row相反，为纵向排列，项目顺序为正序1-2-3，column-reverse同为纵向排列，项目顺序为倒序3-2-1。</p>
+<span id="more"></span>
+
+<p><img data-src="flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/image-20211111090232270.png" alt="image-20211111090232270"></p>
+<p><img data-src="flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/image-20211111090637410.png"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#header</span> <span class="selector-tag">ul</span>&#123;<span class="comment">/*ul为空等同于display: flex;flex-direction: row-reverse; 横排倒叙排列*/</span>&#125;</span><br><span class="line"><span class="selector-id">#header</span> <span class="selector-tag">ul</span>&#123;<span class="attribute">display</span>: flex;&#125;</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;r nav&quot;</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;r&quot;</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;iconfont iconwode&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>欢迎您，陈浩 管理员<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;r&quot;</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;iconfont iconyuechi&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span>&gt;</span>修改密码<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;r&quot;</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;iconfont iconshouye&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span>&gt;</span>公司官网<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;r&quot;</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;iconfont iconbianji&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span>&gt;</span>退出<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="flex-wrap属性"><a href="#flex-wrap属性" class="headerlink" title="flex-wrap属性"></a>flex-wrap属性</h2><p>取值：nowrap(默认) | wrap | wrap-reverse</p>
+<p>用于控制项目是否换行，nowrap表示不换行；</p>
+<p>举个例子：比如容器宽度为300px，容器中有6个宽度为60px的项目，nowrap情况下，项目会强行等分容器宽度从而不换行，那么项目实际宽度也就只有50px了，而非我们自己设置的60px.</p>
+<p><img data-src="flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/image-20211111092656425.png" alt="image-20211111092656425"></p>
+<p>wrap表示换行，即项目不会等分容器宽度，而是根据自身宽度进行排列，如果超出父容器宽度则自然换行。</p>
+<p><img data-src="flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/image-20211111092826346.png" alt="image-20211111092826346"></p>
+<p>wrap-reverse同样表示换行，需要注意的是第一排会紧贴容器底部，而不是我们想象的项目6紧贴容器顶部，效果与wrap相反</p>
+<p><img data-src="flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/image-20211111093007929.png" alt="image-20211111093007929"></p>
+<h2 id="flex-flow属性"><a href="#flex-flow属性" class="headerlink" title="flex-flow属性"></a>flex-flow属性</h2><p>flex-flow属性是flex-deriction与flex-wrap属性的简写集合，默认属性为row nowrap，即横向排列，且不换行，如果需要控制项目排列与换行，推荐使用此属性，而非单独写两个。</p>
+<h2 id="justify-content属性"><a href="#justify-content属性" class="headerlink" title="justify-content属性"></a>justify-content属性</h2><p>justify-content属性定义了项目在主轴上的对齐方式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">justify-content</span>:flex-start | flex-end | center | space-between |space-around;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>flex-start（默认值）：左对齐</li>
+<li>flex-end：右对齐</li>
+<li>center：居中</li>
+<li>space-between:两端对齐，项目之间的间隔都相等</li>
+<li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+</ul>
+<img data-src="flex弹性布局/1112916-20180725163343859-2034975257.png" style="zoom:67%;" />
+
+<h2 id="align-items属性"><a href="#align-items属性" class="headerlink" title="align-items属性"></a>align-items属性</h2><p>align-items属性定义项目在交叉轴上如何对齐。</p>
+<ul>
+<li>flex-start：交叉轴的起点对齐。</li>
+<li>flex-end：交叉轴的终点对齐。</li>
+<li>center：交叉轴的中点对齐。</li>
+<li>baseline: 项目的第一行文字的基线对齐。</li>
+<li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
+</ul>
+<p><img data-src="flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/2b0c39c7e7a80d5a784c8c2ca63cde17.png"></p>
+<h3 id="完美居中"><a href="#完美居中" class="headerlink" title="完美居中"></a>完美居中</h3><p>在下面的例子中，我们会解决一个非常常见的样式问题：完美居中。</p>
+<p>解决方案：将 justify-content 和 align-items 属性设置为居中，然后 flex 项目将完美居中：</p>
+<p><img data-src="flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/image-20211111130836767.png" alt="image-20211111130836767"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css"><span class="selector-class">.flex-container</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="attribute">display</span>: flex;</span></span><br><span class="line"><span class="css">  <span class="attribute">justify-content</span>: center;</span></span><br><span class="line"><span class="css">  <span class="attribute">align-items</span>: center;</span></span><br><span class="line"><span class="css">  <span class="attribute">height</span>: <span class="number">300px</span>;</span></span><br><span class="line"><span class="css">  <span class="attribute">background-color</span>: DodgerBlue;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.flex-container</span>&gt;<span class="selector-tag">div</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="attribute">background-color</span>: <span class="number">#f1f1f1</span>;</span></span><br><span class="line"><span class="css">  <span class="attribute">color</span>: white;</span></span><br><span class="line"><span class="css">  <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">  <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a>align-content</h2><ul>
+<li>flex-start：与交叉轴的起点对齐。</li>
+<li>flex-end：与交叉轴的终点对齐。</li>
+<li>center：与交叉轴的中点对齐。</li>
+<li>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
+<li>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
+<li>stretch（默认值）：轴线占满整个交叉轴。</li>
+</ul>
+<h2 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h2><p>容器属性是加在容器上的，那么项目属性呢，就是写在项目上的，就好比容器属性给ul，项目属性给li差不多一个意思。</p>
+<h3 id="order"><a href="#order" class="headerlink" title="order"></a>order</h3><p>取值：默认0，用于决定项目排列顺序，数值越小，项目排列越靠前。</p>
+<p><img data-src="flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/image-20211111110626605.png" alt="image-20211111110626605"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;<span class="attribute">width</span>: <span class="number">300px</span>;<span class="attribute">height</span>: <span class="number">200px</span>;<span class="attribute">background-color</span>: wheat;<span class="attribute">display</span>: flex;<span class="attribute">flex-wrap</span>: wrap;&#125;</span><br><span class="line">			<span class="selector-class">.box</span> <span class="selector-tag">div</span><span class="selector-pseudo">:nth-of-type</span>(<span class="number">1</span>)&#123;<span class="attribute">width</span>: <span class="number">60px</span>;<span class="attribute">height</span>: <span class="number">60px</span>;<span class="attribute">background</span>: pink;<span class="attribute">line-height</span>: <span class="number">60px</span>;<span class="attribute">text-align</span>: center;<span class="attribute">order</span>: <span class="number">2</span>;&#125;</span><br><span class="line">			<span class="selector-class">.box</span> <span class="selector-tag">div</span><span class="selector-pseudo">:nth-of-type</span>(<span class="number">2</span>)&#123;<span class="attribute">width</span>: <span class="number">60px</span>;<span class="attribute">height</span>: <span class="number">60px</span>;<span class="attribute">background</span>: skyblue;<span class="attribute">line-height</span>: <span class="number">60px</span>;<span class="attribute">text-align</span>: center;<span class="attribute">order</span>: <span class="number">1</span>;&#125;</span><br><span class="line">			<span class="selector-class">.box</span> <span class="selector-tag">div</span><span class="selector-pseudo">:nth-of-type</span>(<span class="number">3</span>)&#123;<span class="attribute">width</span>: <span class="number">60px</span>;<span class="attribute">height</span>: <span class="number">60px</span>;<span class="attribute">background</span>: orange;<span class="attribute">line-height</span>: <span class="number">60px</span>;<span class="attribute">text-align</span>: center;<span class="attribute">order</span>: <span class="number">0</span>;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex-grow"></a>flex-grow</h3><p>取值：默认0，用于决定项目在有剩余空间的情况下是否放大，默认不放大；注意，即便设置了固定宽度，也会放大。</p>
+<p>假设默认三个项目中前两个个项目都是0，最后一个是1，最后的项目会沾满剩余所有空间。</p>
+<p><img data-src="flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/image-20211111110626606.png" alt="image-20211111110904125"></p>
+<p>假设只有第一个项目默认为0，后面两个项目flex-grow均为1，那么后两个项目平分剩余空间。</p>
+<p><img data-src="flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/image-20211111111036956.png" alt="image-20211111111036956"></p>
+<h3 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink"></a>flex-shrink</h3><p>flex-shrink 属性规定某个 flex 项目相对于其余 flex 项目将收缩多少。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"> </span></span><br><span class="line"><span class="css"><span class="selector-id">#main</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="attribute">width</span>: <span class="number">350px</span>;</span></span><br><span class="line"><span class="css">  <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#000000</span>;</span></span><br><span class="line"><span class="css">  <span class="attribute">display</span>: flex;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css"><span class="selector-id">#main</span> <span class="selector-tag">div</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="attribute">flex-grow</span>: <span class="number">1</span>;</span></span><br><span class="line"><span class="css">  <span class="attribute">flex-shrink</span>: <span class="number">1</span>;</span></span><br><span class="line"><span class="css">  <span class="attribute">flex-basis</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css"><span class="selector-id">#main</span> <span class="selector-tag">div</span><span class="selector-pseudo">:nth-of-type</span>(<span class="number">2</span>) &#123;</span></span><br><span class="line"><span class="css">  <span class="attribute">flex-shrink</span>: <span class="number">3</span>;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://cdn.jsdelivr.net/gh/jnylife/ImgHosting/img/image-20211115103935125.png" alt="image-20211115103935125"></p>
+<p>使第二个弹性项目相比其余项目收缩三倍。</p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2022-03-26 11:05:41" itemprop="dateModified" datetime="2022-03-26T11:05:41+08:00">2022-03-26</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="许申奥 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="许申奥 Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="许申奥 PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>许申奥 <i class="ic i-at"><em>@</em></i>XuShenao
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2021/11/10/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" title="flex弹性布局">http://example.com/2021/11/10/flex弹性布局/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2021/10/30/CSS3/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipet4bz0yj20zk0m8e81.jpg" title="CSS3">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>CSS3</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2021/11/14/jnylife/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeun65urj20zk0m81ii.jpg" title="butterfly主题美化">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>butterfly主题美化</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80"><span class="toc-number">1.</span> <span class="toc-text">Flex弹性布局</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#flex-direction"><span class="toc-number">1.1.</span> <span class="toc-text">flex-direction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flex-wrap%E5%B1%9E%E6%80%A7"><span class="toc-number">1.2.</span> <span class="toc-text">flex-wrap属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flex-flow%E5%B1%9E%E6%80%A7"><span class="toc-number">1.3.</span> <span class="toc-text">flex-flow属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#justify-content%E5%B1%9E%E6%80%A7"><span class="toc-number">1.4.</span> <span class="toc-text">justify-content属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#align-items%E5%B1%9E%E6%80%A7"><span class="toc-number">1.5.</span> <span class="toc-text">align-items属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E7%BE%8E%E5%B1%85%E4%B8%AD"><span class="toc-number">1.5.1.</span> <span class="toc-text">完美居中</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#align-content"><span class="toc-number">1.6.</span> <span class="toc-text">align-content</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%B1%9E%E6%80%A7"><span class="toc-number">1.7.</span> <span class="toc-text">项目属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#order"><span class="toc-number">1.7.1.</span> <span class="toc-text">order</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flex-grow"><span class="toc-number">1.7.2.</span> <span class="toc-text">flex-grow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flex-shrink"><span class="toc-number">1.7.3.</span> <span class="toc-text">flex-shrink</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="许申奥"
+      data-src="/images/avatar1.jpg">
+  <p class="name" itemprop="name">许申奥</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">15</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">4</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">24</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2021/10/30/CSS3/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2021/11/14/jnylife/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="In JavaScript学习笔记">JavaScript学习笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ES6/" title="In ES6">ES6</a>
+</div>
+
+    <span><a href="/2021/12/10/ES6%E2%91%A1/" title="ES6②">ES6②</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/11/14/jnylife/" title="butterfly主题美化">butterfly主题美化</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="In JavaScript学习笔记">JavaScript学习笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ES6/" title="In ES6">ES6</a>
+</div>
+
+    <span><a href="/2021/12/10/ES6/" title="ES6+">ES6+</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/10/30/CSS3/" title="CSS3">CSS3</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/11/15/bootstrap%E5%85%A5%E9%97%A8/" title="bootstrap入门">bootstrap入门</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/10/16/CSS/" title="CSS">CSS</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vue/" title="In vue">vue</a>
+</div>
+
+    <span><a href="/2021/12/23/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%91%A2/" title="Vue学习笔记③">Vue学习笔记③</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%AE%9E%E7%94%A8%E5%88%86%E4%BA%AB/" title="In 实用分享">实用分享</a>
+</div>
+
+    <span><a href="/2022/03/23/%E5%88%A9%E7%94%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAbutterfly%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/" title="利用云服务器搭建butterfly主题博客">利用云服务器搭建butterfly主题博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/10/28/html/" title="html5">html5</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vue/" title="In vue">vue</a>
+</div>
+
+    <span><a href="/2022/01/02/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%91%A3/" title="Vue学习笔记④">Vue学习笔记④</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">许申奥 @ Eternal God</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/11/10/flex弹性布局/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

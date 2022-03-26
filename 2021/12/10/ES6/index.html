@@ -1,0 +1,585 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="XuShenao" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="XuShenao" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="XuShenao" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="ES6,let,const,symbol,自测代码面试重点" />
+
+
+<link rel="canonical" href="http://example.com/2021/12/10/ES6/">
+
+
+
+  <title>
+ES6+ - ES6 - JavaScript学习笔记 |
+Eternal God = XuShenao</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">ES6+
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2021-12-10 12:01:44">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-12-10T12:01:44+08:00">2021-12-10</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Eternal God</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+          <img src="https://cdn.jsdelivr.net/gh/jnylife/ImgHosting//img/202112101507292.jpg">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="item" rel="index" title="In JavaScript学习笔记"><span itemprop="name">JavaScript学习笔记</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ES6/" itemprop="item" rel="index" title="In ES6"><span itemprop="name">ES6</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/10/ES6/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar1.jpg">
+    <meta itemprop="name" content="许申奥">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="XuShenao">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="ECMAScript-和-JavaScript-的关系"><a href="#ECMAScript-和-JavaScript-的关系" class="headerlink" title="ECMAScript 和 JavaScript 的关系"></a>ECMAScript 和 JavaScript 的关系</h1><p>一个常见的问题是，ECMAScript 和 JavaScript 到底是什么关系？</p>
+<p>要讲清楚这个问题，需要回顾历史。1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。</p>
+<p>该标准从一开始就是针对 JavaScript 语言制定的，但是之所以不叫 JavaScript，有两个原因。一是商标，Java 是 Sun 公司的商标，根据授权协议，只有 Netscape 公司可以合法地使用 JavaScript 这个名字，且 JavaScript 本身也已经被 Netscape 公司注册为商标。二是想体现这门语言的制定者是 ECMA，不是 Netscape，这样有利于保证这门语言的开放性和中立性。</p>
+<p>因此，ECMAScript 和 JavaScript 的关系是，前者是后者的规格，后者是前者的一种实现。</p>
+<h1 id="let特点"><a href="#let特点" class="headerlink" title="let特点"></a>let特点</h1><ol>
+<li><p>变量不能重复声明</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> star = <span class="string">&#x27;罗志祥&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> star = <span class="string">&#x27;小猪&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://cdn.jsdelivr.net/gh/jnylife/ImgHosting//img/202112101215132.png" alt="image-20211210121526853"></p>
+</li>
+<li><p>块儿级作用域</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> girl = <span class="string">&#x27;周扬青&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(girl);</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
+
+<p>在里面定义的变量外面找不到</p>
+</li>
+<li><p>不存在变量提升</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(song);</span><br><span class="line"><span class="keyword">let</span> song = <span class="string">&#x27;lemon tree&#x27;</span> <span class="comment">//无效写法，无法作用于console.log</span></span><br></pre></td></tr></table></figure></li>
+<li><p>不影响作用域链</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">let school = &#x27;ynnubs&#x27;</span><br><span class="line">function fn()&#123;</span><br><span class="line"> console.log(school)</span><br><span class="line">&#125;</span><br><span class="line">fn();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通俗来讲，就是在外面定义的变量里面找得到，反之，函数里面定义的变量外面就找不到。</p>
+<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> items = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;item&#x27;</span>);</span><br><span class="line"><span class="comment">//遍历并绑定事件</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;items.length;i++)&#123;</span><br><span class="line">    items[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//修改当前元素的背景颜色</span></span><br><span class="line">        <span class="comment">// this.style.background = &#x27;pink&#x27;;</span></span><br><span class="line">        items[i].style.background = <span class="string">&#x27;pink&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="const定义常量"><a href="#const定义常量" class="headerlink" title="const定义常量"></a>const定义常量</h1><ol>
+<li>一定要赋初始值</li>
+<li>一般常量使用大写。</li>
+<li>常量的值不能修改</li>
+<li>块级作用域</li>
+<li>对于数组和对象的元素修改，不算做对常量的修改，不会报错。</li>
+</ol>
+<h1 id="变量解构赋值"><a href="#变量解构赋值" class="headerlink" title="变量解构赋值"></a>变量解构赋值</h1><h2 id="数组的解构"><a href="#数组的解构" class="headerlink" title="数组的解构"></a>数组的解构</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> F4 = [<span class="string">&#x27;小沈阳&#x27;</span>,<span class="string">&#x27;刘能&#x27;</span>,<span class="string">&#x27;赵四&#x27;</span>,<span class="string">&#x27;宋小宝&#x27;</span>];</span><br><span class="line"><span class="keyword">let</span> [xiao, liu, zhao, song] = F4;</span><br><span class="line"><span class="built_in">console</span>.log(xiao);</span><br><span class="line"><span class="built_in">console</span>.log(liu);</span><br><span class="line"><span class="built_in">console</span>.log(zhao);</span><br><span class="line"><span class="built_in">console</span>.log(song);</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="对象的解构"><a href="#对象的解构" class="headerlink" title="对象的解构"></a>对象的解构</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> zhao = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;赵本山&#x27;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="string">&#x27;不详&#x27;</span>,</span><br><span class="line">    <span class="attr">xiaopin</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;我可以演小品&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123;name, age, xiaopin&#125; = zhao;</span><br><span class="line"><span class="built_in">console</span>.log(name);</span><br><span class="line"><span class="built_in">console</span>.log(age);</span><br><span class="line"><span class="built_in">console</span>.log(xiaopin);</span><br><span class="line">xiaopin();</span><br><span class="line"></span><br><span class="line"><span class="comment">/*let &#123;xiaopin&#125; = zhao;</span></span><br><span class="line"><span class="comment">xiaopin();  可以单独的解构*/</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h1><ol>
+<li><p>声明</p>
+<pre><code>   ES6 引入新的声明字符串的方式 『``』
+</code></pre>
+<p>​        <code>let str = 我也是一个字符串哦!;</code><br>​        <code>console.log(str, typeof str);</code></p>
+</li>
+<li><p>内容中可以直接出现换行符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">`&lt;ul&gt;</span></span><br><span class="line"><span class="string">            &lt;li&gt;沈腾&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li&gt;玛丽&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li&gt;魏翔&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li&gt;艾伦&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;/ul&gt;`</span>;</span><br></pre></td></tr></table></figure></li>
+<li><p>变量拼接</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> lovest = <span class="string">&#x27;魏翔&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> out = <span class="string">`<span class="subst">$&#123;lovest&#125;</span>是我心目中最搞笑的演员!!`</span>;</span><br><span class="line"><span class="built_in">console</span>.log(out);</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="简化对象写法"><a href="#简化对象写法" class="headerlink" title="简化对象写法"></a>简化对象写法</h1><p>ES6 允许在大括号里面，直接写入变量和函数，作为对象的属性和方法。这样的书写更加简洁。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&#x27;aaa&#x27;</span>;</span><br><span class="line">      <span class="keyword">let</span> change = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">&#x27;我们可以改变你!!&#x27;</span>);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">const</span> school = &#123;</span><br><span class="line">          name,</span><br><span class="line">          change,</span><br><span class="line">          <span class="function"><span class="title">improve</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">              <span class="built_in">console</span>.log(<span class="string">&quot;我们可以提高你的技能&quot;</span>);</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="built_in">console</span>.log(school);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h1><p>ES6 允许使用「箭头」（=&gt;）定义函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fn = <span class="function">(<span class="params">a,b</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> result = fn(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. this 是静态的. this 始终指向函数声明时所在作用域下的 this 的值</span></span><br><span class="line">      <span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="built_in">this</span>.name);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">let</span> getName2 = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="built_in">this</span>.name);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">//设置 window 对象的 name 属性</span></span><br><span class="line">      <span class="built_in">window</span>.name = <span class="string">&#x27;aaa&#x27;</span>;</span><br><span class="line">      <span class="keyword">const</span> school = &#123;</span><br><span class="line">          <span class="attr">name</span>: <span class="string">&quot;ATGUIGU&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">//直接调用</span></span><br><span class="line">      <span class="comment">// getName();</span></span><br><span class="line">      <span class="comment">// getName2();</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">//call 方法调用</span></span><br><span class="line">      <span class="comment">// getName.call(school);</span></span><br><span class="line">      <span class="comment">// getName2.call(school);</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">//2. 不能作为构造实例化对象</span></span><br><span class="line">      <span class="comment">// let Person = (name, age) =&gt; &#123;</span></span><br><span class="line">      <span class="comment">//     this.name = name;</span></span><br><span class="line">      <span class="comment">//     this.age = age;</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="comment">// let me = new Person(&#x27;xiao&#x27;,30);</span></span><br><span class="line">      <span class="comment">// console.log(me);</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">//3. 不能使用 arguments 变量</span></span><br><span class="line">      <span class="comment">// let fn = () =&gt; &#123;</span></span><br><span class="line">      <span class="comment">//     console.log(arguments);</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="comment">// fn(1,2,3);</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">//4. 箭头函数的简写</span></span><br><span class="line">          <span class="comment">//1) 省略小括号, 当形参有且只有一个的时候</span></span><br><span class="line">          <span class="comment">// let add = n =&gt; &#123;</span></span><br><span class="line">          <span class="comment">//     return n + n;</span></span><br><span class="line">          <span class="comment">// &#125;</span></span><br><span class="line">          <span class="comment">// console.log(add(9));</span></span><br><span class="line">          <span class="comment">//2) 省略花括号, 当代码体只有一条语句的时候, 此时 return 必须省略</span></span><br><span class="line">          <span class="comment">// 而且语句的执行结果就是函数的返回值</span></span><br><span class="line">          <span class="keyword">let</span> pow = <span class="function"><span class="params">n</span> =&gt;</span> n * n;</span><br><span class="line">              </span><br><span class="line">          <span class="built_in">console</span>.log(pow(<span class="number">8</span>));</span><br></pre></td></tr></table></figure>
+
+<h1 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h1><p>扩展运算符能将『数组』转换为逗号分隔的『参数序列』，也就是将数组转成了实参。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> tfboys = [<span class="string">&#x27;易烊千玺&#x27;</span>,<span class="string">&#x27;王源&#x27;</span>,<span class="string">&#x27;王俊凯&#x27;</span>];</span><br><span class="line"><span class="comment">// =&gt; &#x27;易烊千玺&#x27;,&#x27;王源&#x27;,&#x27;王俊凯&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明一个函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">chunwan</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">chunwan(...tfboys);<span class="comment">// chunwan(&#x27;易烊千玺&#x27;,&#x27;王源&#x27;,&#x27;王俊凯&#x27;)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="拓展运算符应用"><a href="#拓展运算符应用" class="headerlink" title="拓展运算符应用"></a>拓展运算符应用</h2><ol>
+<li><p>数组的合并</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> kuaizi = [<span class="string">&#x27;王太利&#x27;</span>,<span class="string">&#x27;肖央&#x27;</span>];</span><br><span class="line"><span class="keyword">const</span> fenghuang = [<span class="string">&#x27;曾毅&#x27;</span>,<span class="string">&#x27;玲花&#x27;</span>];</span><br><span class="line"><span class="comment">// const zuixuanxiaopingguo = kuaizi.concat(fenghuang);</span></span><br><span class="line"><span class="keyword">const</span> zuixuanxiaopingguo = [...kuaizi, ...fenghuang];</span><br><span class="line"><span class="built_in">console</span>.log(zuixuanxiaopingguo);</span><br></pre></td></tr></table></figure></li>
+<li><p>数组的克隆</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sanzhihua = [<span class="string">&#x27;E&#x27;</span>,<span class="string">&#x27;G&#x27;</span>,<span class="string">&#x27;M&#x27;</span>];</span><br><span class="line"><span class="keyword">const</span> sanyecao = [...sanzhihua];<span class="comment">//  [&#x27;E&#x27;,&#x27;G&#x27;,&#x27;M&#x27;]</span></span><br><span class="line"><span class="built_in">console</span>.log(sanyecao);</span><br></pre></td></tr></table></figure></li>
+<li><p>将伪数组转为真正的数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> divs = <span class="built_in">document</span>.querySelectorAll(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> divArr = [...divs];</span><br><span class="line"><span class="built_in">console</span>.log(divArr);<span class="comment">// arguments</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="symbol的基本使用"><a href="#symbol的基本使用" class="headerlink" title="symbol的基本使用"></a>symbol的基本使用</h1><p>ES5 的对象属性名都是字符串，这容易造成属性名的冲突。比如，你使用了一个他人提供的对象，但又想为这个对象添加新的方法（mixin 模式），新方法的名字就有可能与现有方法产生冲突。如果有一种机制，保证每个属性的名字都是独一无二的就好了，这样就从根本上防止属性名的冲突。这就是 ES6 引入<code>Symbol</code>的原因。</p>
+<p>ES5 的对象属性名都是字符串，这容易造成属性名的冲突。比如，你使用了一个他人提供的对象，但又想为这个对象添加新的方法（mixin 模式），新方法的名字就有可能与现有方法产生冲突。如果有一种机制，保证每个属性的名字都是独一无二的就好了，这样就从根本上防止属性名的冲突。这就是 ES6 引入<code>Symbol</code>的原因。</p>
+<p>Symbol 值通过<code>Symbol</code>函数生成。这就是说，对象的属性名现在可以有两种类型，一种是原来就有的字符串，另一种就是新增的 Symbol 类型。凡是属性名属于 Symbol 类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s = <span class="built_in">Symbol</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> s</span><br><span class="line"><span class="comment">// &quot;symbol&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，变量<code>s</code>就是一个独一无二的值。<code>typeof</code>运算符的结果，表明变量<code>s</code>是 Symbol 数据类型，而不是字符串之类的其他类型。</p>
+<p>注意，<code>Symbol</code>函数前不能使用<code>new</code>命令，否则会报错。这是因为生成的 Symbol 是一个原始类型的值，不是对象。也就是说，由于 Symbol 值不是对象，所以不能添加属性。基本上，它是一种类似于字符串的数据类型。</p>
+<p><code>Symbol</code>函数可以接受一个字符串作为参数，表示对 Symbol 实例的描述，主要是为了在控制台显示，或者转为字符串时，比较容易区分。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s1 = <span class="built_in">Symbol</span>(<span class="string">&#x27;foo&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> s2 = <span class="built_in">Symbol</span>(<span class="string">&#x27;bar&#x27;</span>);</span><br><span class="line"></span><br><span class="line">s1 <span class="comment">// Symbol(foo)</span></span><br><span class="line">s2 <span class="comment">// Symbol(bar)</span></span><br><span class="line"></span><br><span class="line">s1.toString() <span class="comment">// &quot;Symbol(foo)&quot;</span></span><br><span class="line">s2.toString() <span class="comment">// &quot;Symbol(bar)&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，<code>s1</code>和<code>s2</code>是两个 Symbol 值。如果不加参数，它们在控制台的输出都是<code>Symbol()</code>，不利于区分。有了参数以后，就等于为它们加上了描述，输出的时候就能够分清，到底是哪一个值。</p>
+<h1 id="迭代器（遍历器）"><a href="#迭代器（遍历器）" class="headerlink" title="迭代器（遍历器）"></a>迭代器（遍历器）</h1><p>JavaScript 原有的表示“集合”的数据结构，主要是数组（<code>Array</code>）和对象（<code>Object</code>），ES6 又添加了<code>Map</code>和<code>Set</code>。这样就有了四种数据集合，用户还可以组合使用它们，定义自己的数据结构，比如数组的成员是<code>Map</code>，<code>Map</code>的成员是对象。这样就需要一种统一的接口机制，来处理所有不同的数据结构。</p>
+<p>遍历器（Iterator）就是这样一种机制。它是一种接口，为各种不同的数据结构提供统一的访问机制。任何数据结构只要部署 Iterator 接口，就可以完成遍历操作（即依次处理该数据结构的所有成员）。</p>
+<p>Iterator 的作用有三个：一是为各种数据结构，提供一个统一的、简便的访问接口；二是使得数据结构的成员能够按某种次序排列；三是 ES6 创造了一种新的遍历命令<code>for...of</code>循环，Iterator 接口主要供<code>for...of</code>消费。</p>
+<p>Iterator 的遍历过程是这样的。</p>
+<p>（1）创建一个指针对象，指向当前数据结构的起始位置。也就是说，遍历器对象本质上，就是一个指针对象。</p>
+<p>（2）第一次调用指针对象的<code>next</code>方法，可以将指针指向数据结构的第一个成员。</p>
+<p>（3）第二次调用指针对象的<code>next</code>方法，指针就指向数据结构的第二个成员。</p>
+<p>（4）不断调用指针对象的<code>next</code>方法，直到它指向数据结构的结束位置。</p>
+<p>每一次调用<code>next</code>方法，都会返回数据结构的当前成员的信息。具体来说，就是返回一个包含<code>value</code>和<code>done</code>两个属性的对象。其中，<code>value</code>属性是当前成员的值，<code>done</code>属性是一个布尔值，表示遍历是否结束。</p>
+<p>下面是一个模拟<code>next</code>方法返回值的例子。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> banji = &#123;</span><br><span class="line">         <span class="attr">name</span>: <span class="string">&quot;终极一班&quot;</span>,</span><br><span class="line">         <span class="attr">stus</span>: [</span><br><span class="line">             <span class="string">&#x27;xiaoming&#x27;</span>,</span><br><span class="line">             <span class="string">&#x27;xiaoning&#x27;</span>,</span><br><span class="line">             <span class="string">&#x27;xiaotian&#x27;</span>,</span><br><span class="line">             <span class="string">&#x27;knight&#x27;</span></span><br><span class="line">         ],</span><br><span class="line">         [<span class="built_in">Symbol</span>.iterator]() &#123;</span><br><span class="line">             <span class="comment">//索引变量</span></span><br><span class="line">             <span class="keyword">let</span> index = <span class="number">0</span>;</span><br><span class="line">             <span class="comment">//</span></span><br><span class="line">             <span class="keyword">let</span> _this = <span class="built_in">this</span>;</span><br><span class="line">             <span class="keyword">return</span> &#123;</span><br><span class="line">                 <span class="attr">next</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                     <span class="keyword">if</span> (index &lt; _this.stus.length) &#123;</span><br><span class="line">                         <span class="keyword">const</span> result = &#123; <span class="attr">value</span>: _this.stus[index], <span class="attr">done</span>: <span class="literal">false</span> &#125;;</span><br><span class="line">                         <span class="comment">//下标自增</span></span><br><span class="line">                         index++;</span><br><span class="line">                         <span class="comment">//返回结果</span></span><br><span class="line">                         <span class="keyword">return</span> result;</span><br><span class="line">                     &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                         <span class="keyword">return</span> &#123;<span class="attr">value</span>: <span class="literal">undefined</span>, <span class="attr">done</span>: <span class="literal">true</span>&#125;;</span><br><span class="line">                     &#125;</span><br><span class="line">                 &#125;</span><br><span class="line">             &#125;;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">     <span class="comment">//遍历这个对象 </span></span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">let</span> v <span class="keyword">of</span> banji) &#123;</span><br><span class="line">         <span class="built_in">console</span>.log(v);</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+
+<p>参考作者：<span class="exturl" data-url="aHR0cHM6Ly93d3cucnVhbnlpZmVuZy5jb20v">阮一峰</span></p>
+<p>授权：<span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLzQuMC8=">署名-非商用许可证</span></p>
+
+      <div class="tags">
+          <a href="/tags/ES6/" rel="tag"><i class="ic i-tag"></i> ES6</a>
+          <a href="/tags/let/" rel="tag"><i class="ic i-tag"></i> let</a>
+          <a href="/tags/const/" rel="tag"><i class="ic i-tag"></i> const</a>
+          <a href="/tags/symbol/" rel="tag"><i class="ic i-tag"></i> symbol</a>
+          <a href="/tags/%E8%87%AA%E6%B5%8B%E4%BB%A3%E7%A0%81%E9%9D%A2%E8%AF%95%E9%87%8D%E7%82%B9/" rel="tag"><i class="ic i-tag"></i> 自测代码面试重点</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2021-12-25 15:19:56" itemprop="dateModified" datetime="2021-12-25T15:19:56+08:00">2021-12-25</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="许申奥 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="许申奥 Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="许申奥 PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>许申奥 <i class="ic i-at"><em>@</em></i>XuShenao
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2021/12/10/ES6/" title="ES6+">http://example.com/2021/12/10/ES6/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2021/11/15/JavaScript%E5%9F%BA%E7%A1%80/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicliierfjj20zk0m8npd.jpg" title="JavaScript基础">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>JavaScript基础</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2021/12/10/ES6%E2%91%A1/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;jnylife&#x2F;ImgHosting&#x2F;&#x2F;img&#x2F;202112101507292.jpg" title="ES6②">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> ES6</span>
+  <h3>ES6②</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ECMAScript-%E5%92%8C-JavaScript-%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">1.</span> <span class="toc-text">ECMAScript 和 JavaScript 的关系</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#let%E7%89%B9%E7%82%B9"><span class="toc-number">2.</span> <span class="toc-text">let特点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B"><span class="toc-number">2.1.</span> <span class="toc-text">案例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#const%E5%AE%9A%E4%B9%89%E5%B8%B8%E9%87%8F"><span class="toc-number">3.</span> <span class="toc-text">const定义常量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC"><span class="toc-number">4.</span> <span class="toc-text">变量解构赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E8%A7%A3%E6%9E%84"><span class="toc-number">4.1.</span> <span class="toc-text">数组的解构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%A7%A3%E6%9E%84"><span class="toc-number">4.2.</span> <span class="toc-text">对象的解构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">5.</span> <span class="toc-text">模板字符串</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8C%96%E5%AF%B9%E8%B1%A1%E5%86%99%E6%B3%95"><span class="toc-number">6.</span> <span class="toc-text">简化对象写法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0"><span class="toc-number">7.</span> <span class="toc-text">箭头函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">8.</span> <span class="toc-text">扩展运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%E5%BA%94%E7%94%A8"><span class="toc-number">8.1.</span> <span class="toc-text">拓展运算符应用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#symbol%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-number">9.</span> <span class="toc-text">symbol的基本使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%EF%BC%88%E9%81%8D%E5%8E%86%E5%99%A8%EF%BC%89"><span class="toc-number">10.</span> <span class="toc-text">迭代器（遍历器）</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li class="active"><a href="/2021/12/10/ES6/" rel="bookmark" title="ES6+">ES6+</a></li><li><a href="/2021/12/10/ES6%E2%91%A1/" rel="bookmark" title="ES6②">ES6②</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="许申奥"
+      data-src="/images/avatar1.jpg">
+  <p class="name" itemprop="name">许申奥</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">15</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">4</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">24</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2021/11/15/JavaScript%E5%9F%BA%E7%A1%80/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2021/12/10/ES6%E2%91%A1/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="In JavaScript学习笔记">JavaScript学习笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ES6/" title="In ES6">ES6</a>
+</div>
+
+    <span><a href="/2021/12/10/ES6/" title="ES6+">ES6+</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/10/12/helloworld/" title="helloworld">helloworld</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vue/" title="In vue">vue</a>
+</div>
+
+    <span><a href="/2022/01/02/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%91%A3/" title="Vue学习笔记④">Vue学习笔记④</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/10/28/html/" title="html5">html5</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%AE%9E%E7%94%A8%E5%88%86%E4%BA%AB/" title="In 实用分享">实用分享</a>
+</div>
+
+    <span><a href="/2022/03/23/%E5%88%A9%E7%94%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAbutterfly%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/" title="利用云服务器搭建butterfly主题博客">利用云服务器搭建butterfly主题博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="In JavaScript学习笔记">JavaScript学习笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ES6/" title="In ES6">ES6</a>
+</div>
+
+    <span><a href="/2021/12/10/ES6%E2%91%A1/" title="ES6②">ES6②</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/11/10/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" title="flex弹性布局">flex弹性布局</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/10/30/CSS3/" title="CSS3">CSS3</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vue/" title="In vue">vue</a>
+</div>
+
+    <span><a href="/2021/12/23/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%91%A2/" title="Vue学习笔记③">Vue学习笔记③</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="In JavaScript学习笔记">JavaScript学习笔记</a>
+</div>
+
+    <span><a href="/2021/12/14/JavaScript%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6/" title="JavaScript执行机制">JavaScript执行机制</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">许申奥 @ Eternal God</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/12/10/ES6/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

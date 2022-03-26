@@ -1,0 +1,576 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="XuShenao" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="XuShenao" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="XuShenao" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="云服务器,搭建个人博客" />
+
+
+<link rel="canonical" href="http://example.com/2022/03/23/%E5%88%A9%E7%94%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAbutterfly%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/">
+
+
+
+  <title>
+利用云服务器搭建butterfly主题博客 - 实用分享 |
+Eternal God = XuShenao</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">利用云服务器搭建butterfly主题博客
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2022-03-23 10:39:38">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-03-23T10:39:38+08:00">2022-03-23</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Eternal God</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+          <img src="https://cdn.jsdelivr.net/gh/jnylife/ImgHosting/img/202111211000900.png">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E5%AE%9E%E7%94%A8%E5%88%86%E4%BA%AB/" itemprop="item" rel="index" title="In 实用分享"><span itemprop="name">实用分享</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/23/%E5%88%A9%E7%94%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAbutterfly%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar1.jpg">
+    <meta itemprop="name" content="许申奥">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="XuShenao">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="1-文章介绍"><a href="#1-文章介绍" class="headerlink" title="1.文章介绍"></a>1.文章介绍</h1><p>网址展示：<span class="exturl" data-url="aHR0cHM6Ly9qbnlsaWZlLmNvbS8=">我的个人博客</span></p>
+<p><img data-src="http://cdn.ymktchic.top/img/202201211544798.gif" alt="img"></p>
+<p>此文章总结不易，参考各个文章总结，如有问题请留言…</p>
+<h1 id="2-环境要求"><a href="#2-环境要求" class="headerlink" title="2.环境要求"></a>2.环境要求</h1><h2 id="2-1安装前的准备"><a href="#2-1安装前的准备" class="headerlink" title="2.1安装前的准备"></a>2.1安装前的准备</h2><p>一台云服务器点此链接购买享专属优惠，买一台2核2G的足够。</p>
+<p>【腾讯云】爆款2核2G云服务器首年40元，企业首购最高获赠300元京东卡<span class="exturl" data-url="aHR0cHM6Ly9jdXJsLnFjbG91ZC5jb20vWXJ6SGNUUjk=">https://curl.qcloud.com/YrzHcTR9</span></p>
+<p><img data-src="http://cdn.ymktchic.top/img/f3iaqburie.jpg" alt="img"></p>
+<h2 id="2-2笔者环境："><a href="#2-2笔者环境：" class="headerlink" title="2.2笔者环境："></a>2.2笔者环境：</h2><p>in11 64位；</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT1ub2RlJnNwbT0xMDAxLjIxMDEuMzAwMS43MDIw">node</span>.js：v14.15.3 64位；</p>
+<p>git：2.29.2.windows.2 64位</p>
+<p>编写代码使用VSCode</p>
+<h2 id="2-3node-js安装"><a href="#2-3node-js安装" class="headerlink" title="2.3node.js安装"></a>2.3node.js安装</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL2Rvd25sb2FkL3JlbGVhc2UvdjE0LjE1LjMvbm9kZS12MTQuMTUuMy14NjQubXNp">node-v14.15.3-x64.msi</span></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>自主安装（修改安装路径，一路next）</p>
+<h3 id="验证安装是否成功"><a href="#验证安装是否成功" class="headerlink" title="验证安装是否成功"></a>验证安装是否成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cmd 查看版本</span><br><span class="line">C:\Users\hong&gt;node -v</span><br><span class="line">v14.15.3</span><br><span class="line"></span><br><span class="line">C:\Users\hong&gt;npm -v</span><br><span class="line">6.14.9</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置全局目录"><a href="#设置全局目录" class="headerlink" title="设置全局目录"></a>设置全局目录</h3><p>命令提示行打入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm conﬁg <span class="built_in">set</span> preﬁx <span class="string">&quot;E:\environment\nodejs\node_global&quot;</span></span><br><span class="line">npm conﬁg <span class="built_in">set</span> cache <span class="string">&quot;E:\environment\nodejs\node_cache&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-4-git安装"><a href="#2-4-git安装" class="headerlink" title="2.4 git安装"></a>2.4 git安装</h2><h3 id="下载-1"><a href="#下载-1" class="headerlink" title="下载"></a>下载</h3><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dpdC1mb3Itd2luZG93cy9naXQvcmVsZWFzZXMvZG93bmxvYWQvdjIuMzMuMS53aW5kb3dzLjEvR2l0LTIuMzMuMS02NC1iaXQuZXhl">Git-2.33.1-64-bit.exe</span></p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><p>自主安装（修改安装路径，一路next）</p>
+<h3 id="验证安装是否成功-1"><a href="#验证安装是否成功-1" class="headerlink" title="验证安装是否成功"></a>验证安装是否成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cmd 查看版本</span><br><span class="line">C:\Users\hong&gt;git --version</span><br><span class="line">git version 2.33.1</span><br></pre></td></tr></table></figure>
+
+<p>设置Github的名字和邮箱</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;你的名字&quot;</span></span><br><span class="line">git config --global user.email“你的邮箱<span class="string">&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>生成ssh</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;你的名字/你的邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/c/Users/Administrator/.ssh/id_rsa):</span><br><span class="line">/c/Users/Administrator/.ssh/id_rsa already exists.</span><br><span class="line">Overwrite (y/n)? y（输入y）</span><br><span class="line">Enter passphrase (empty for no passphrase):（回车）</span><br><span class="line">Enter same passphrase again:（回车）</span><br></pre></td></tr></table></figure>
+
+<p>系统会自动在.ssh文件夹(<strong>.SSH在C:\Users\Windows用户名目录下</strong>)下生成两个文件，id_rsa和id_rsa.pub</p>
+<h1 id="3-Hexo"><a href="#3-Hexo" class="headerlink" title="3.Hexo"></a>3.<span class="exturl" data-url="aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT1IZXhvJnNwbT0xMDAxLjIxMDEuMzAwMS43MDIw">Hexo</span></h1><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvY29tbWFuZHMuaHRtbA==">Hexo指令</span></p>
+<h2 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># 选择存放博客文件的位置，鼠标右键，选择Git Bash Here</span><br><span class="line"># 依次执行完成以下操作</span><br><span class="line"></span><br><span class="line"># 1.hexo框架的全局安装</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"></span><br><span class="line"># 2.新建一个网站，[folder]改自定义博客文件夹名称</span><br><span class="line">hexo init [folder]</span><br><span class="line"></span><br><span class="line"># 3.进入博客文件夹</span><br><span class="line">cd 上一步博客文件夹名称</span><br><span class="line"></span><br><span class="line"># 4.安装博客所需要的依赖文件</span><br><span class="line">npm install</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>运行完成，此时博客文件夹<img data-src="http://cdn.ymktchic.top/img/c6867fe8dfa22fa76adaf68edec0a5af.png" alt="image-20211107122548660">中多了许多文件， 此时 Hexo 框架的本地搭建已经完成了。</p>
+<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>生成静态文件并启动服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g &amp;&amp;  hexo s</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p>运行成功最后一行出现</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+
+<p>浏览器中打开 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo0MDAwLw==">http://localhost:4000</span> 或127.0.0.1:4000，看到网页，则运行成功</p>
+<h2 id="4-1-安装"><a href="#4-1-安装" class="headerlink" title="4.1 安装"></a>4.1 安装</h2><p>在hexo根目录执行</p>
+<ol>
+<li><p>下载</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b master https://gitee.com/immyw/hexo-theme-butterfly.git themes/butterfly</span><br></pre></td></tr></table></figure></li>
+<li><p>应用主题</p>
+</li>
+</ol>
+<p>修改hexo根目录下的_config.yml，修改主题</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">butterfly</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>安装插件，pug 以及 stylus 的渲染器</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>升级建议</li>
+</ol>
+<p>为减少升级主题带来的不便，采用以下方法</p>
+<p>hexo根目录下创建config.butterfly.yml，主题（磁盘:\博客跟目录\themes\butterfly）下的config.yml內容复制到刚刚创建的config.butterfly.yml</p>
+<p>注：</p>
+<ol>
+<li>主题目录下的config.yml不可删</li>
+<li>以后只需要配置config.butterfly.yml即可，配置主题下config.yml无效</li>
+</ol>
+<h2 id="4-2-配置"><a href="#4-2-配置" class="headerlink" title="4.2 配置"></a>4.2 配置</h2><p>详情配置信息可前往一下主题配置首页调试。有问题也可以访问文章开头我的博客进行评论联系</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9idXR0ZXJmbHkuanMub3JnLw==">Butterfly - A Simple and Card UI Design theme for Hexo</span></p>
+<h1 id="6-个人服务器部署"><a href="#6-个人服务器部署" class="headerlink" title="6.个人服务器部署"></a>6.个人服务器部署</h1><h2 id="为linux服务器新建用户"><a href="#为linux服务器新建用户" class="headerlink" title="为linux服务器新建用户"></a>为linux服务器新建用户</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用户名就是git，若不存在用户目录，则会创建</span></span><br><span class="line">adduser -d /home/git -m git  </span><br><span class="line"><span class="comment"># 输入设置git用户的密码，此步骤在此不展示，建议密码设置复杂点，毕竟是放在网上的</span></span><br><span class="line">passwd git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 编辑/etc/sudoers文件，在root	ALL=(ALL) 	ALL之后回车追加以下内容</span></span><br><span class="line">git	ALL=(ALL) 	ALL</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加SSH信任"><a href="#添加SSH信任" class="headerlink" title="添加SSH信任"></a>添加SSH信任</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 /home/git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换用户并进入当前用户目录</span></span><br><span class="line">su git</span><br><span class="line"><span class="built_in">cd</span> /home/git</span><br><span class="line"><span class="comment"># 创建文件并给予权限</span></span><br><span class="line">mkdir .ssh &amp;&amp; chmod 700 .ssh</span><br><span class="line">touch .ssh/authorized_keys &amp;&amp; chmod 600 .ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+
+<h2 id="上传本地id-rsa-pub"><a href="#上传本地id-rsa-pub" class="headerlink" title="上传本地id_rsa_pub"></a>上传本地id_rsa_pub</h2><p>linux新开一个终端</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># root用户下执行</span></span><br><span class="line"><span class="built_in">cd</span> ~/.ssh/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 此步将id_rsa.pub上传当前目录再执行查看</span></span><br><span class="line">ls ./id_rsa.pub</span><br><span class="line"><span class="comment"># cp到git用户目录下</span></span><br><span class="line">scp ./id_rsa.pub root@114.xxx.xxx.xxx:/home/git</span><br></pre></td></tr></table></figure>
+
+<p>切换用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 切换到git用户</span></span><br><span class="line">su git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入git用户的家目录</span></span><br><span class="line"><span class="built_in">cd</span> /home/git</span><br><span class="line"></span><br><span class="line"><span class="comment">#将id_rsa.pub文件内容追加到authorized_keys中</span></span><br><span class="line">cat ./id_rsa.pub &gt;&gt; .ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+
+<h2 id="本地Git-Bash-Here连接服务器"><a href="#本地Git-Bash-Here连接服务器" class="headerlink" title="本地Git Bash Here连接服务器"></a>本地Git Bash Here连接服务器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 连接</span></span><br><span class="line">ssh git@服务器IP</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新仓库要建立在哪个文件夹自己选，我直接放在git用户的目录下</span></span><br><span class="line"><span class="built_in">cd</span> /home/git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个新仓库目录</span></span><br><span class="line">mkdir hexoblog.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入新仓库目录</span></span><br><span class="line"><span class="built_in">cd</span> hexoblog.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化该新仓库</span></span><br><span class="line">git init --bare</span><br><span class="line"></span><br><span class="line"><span class="comment"># 出现以下内容表示成功</span></span><br><span class="line">Initialized empty Git repository <span class="keyword">in</span> /home/git/hexoblog.git/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>如连接时报错：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ECDSA host key <span class="keyword">for</span> [ip address] has changed and you have requested strict checking</span><br></pre></td></tr></table></figure>
+
+<p>解决：修改本地.ssh下的host文件即可，删除与服务器连接信息</p>
+<p>至此，服务器上的git仓库搭建完毕，地址为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git@服务器IP:/home/git/hexoblog.git</span><br></pre></td></tr></table></figure>
+
+<h2 id="git仓库使用git-hooks自动部署"><a href="#git仓库使用git-hooks自动部署" class="headerlink" title="git仓库使用git-hooks自动部署"></a>git仓库使用git-hooks自动部署</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新建部署后文件位置</span></span><br><span class="line">sudo mkdir -p /home/web/hexo</span><br></pre></td></tr></table></figure>
+
+<p>仓库下新建/hooks/post-update文件，新增内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">git --work-tree=/home/web/hexo --git-dir=/home/git/hexoblog.git checkout -f</span><br></pre></td></tr></table></figure>
+
+<p>给post-update权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/git/hexoblog.git/hooks/</span><br><span class="line"></span><br><span class="line">sudo chown -R git:git /home/web/hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋予其可执行权限</span></span><br><span class="line">sudo chmod +x post-update</span><br></pre></td></tr></table></figure>
+
+<h2 id="本地hexo配置"><a href="#本地hexo配置" class="headerlink" title="本地hexo配置"></a>本地hexo配置</h2><p>修改根目录下config.yml文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> </span><br><span class="line">    <span class="attr">repo:</span> <span class="string">git@服务器IP:/home/git/hexoblog.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment">#把博客推送至主分支</span></span><br></pre></td></tr></table></figure>
+
+<p>至此，在根目录Git Bash Here执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p>查看服务器/home/web/hexo目录下生成静态文件，至此完成！！</p>
+
+      <div class="tags">
+          <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag"><i class="ic i-tag"></i> 云服务器</a>
+          <a href="/tags/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" rel="tag"><i class="ic i-tag"></i> 搭建个人博客</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2022-03-23 11:11:41" itemprop="dateModified" datetime="2022-03-23T11:11:41+08:00">2022-03-23</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="许申奥 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="许申奥 Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="许申奥 PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>许申奥 <i class="ic i-at"><em>@</em></i>XuShenao
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2022/03/23/%E5%88%A9%E7%94%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAbutterfly%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/" title="利用云服务器搭建butterfly主题博客">http://example.com/2022/03/23/利用云服务器搭建butterfly主题博客/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/01/02/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%91%A3/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;jnylife&#x2F;ImgHosting&#x2F;img&#x2F;202112131527508.jpg" title="Vue学习笔记④">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> vue</span>
+  <h3>Vue学习笔记④</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E6%96%87%E7%AB%A0%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">1.文章介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82"><span class="toc-number">2.</span> <span class="toc-text">2.环境要求</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1%E5%AE%89%E8%A3%85%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87"><span class="toc-number">2.1.</span> <span class="toc-text">2.1安装前的准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2%E7%AC%94%E8%80%85%E7%8E%AF%E5%A2%83%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">2.2笔者环境：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3node-js%E5%AE%89%E8%A3%85"><span class="toc-number">2.3.</span> <span class="toc-text">2.3node.js安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-number">2.3.1.</span> <span class="toc-text">下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.3.2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E5%AE%89%E8%A3%85%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F"><span class="toc-number">2.3.3.</span> <span class="toc-text">验证安装是否成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%85%A8%E5%B1%80%E7%9B%AE%E5%BD%95"><span class="toc-number">2.3.4.</span> <span class="toc-text">设置全局目录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-git%E5%AE%89%E8%A3%85"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 git安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD-1"><span class="toc-number">2.4.1.</span> <span class="toc-text">下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-1"><span class="toc-number">2.4.2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E5%AE%89%E8%A3%85%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F-1"><span class="toc-number">2.4.3.</span> <span class="toc-text">验证安装是否成功</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Hexo"><span class="toc-number">3.</span> <span class="toc-text">3.Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4"><span class="toc-number">3.1.</span> <span class="toc-text">指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-2"><span class="toc-number">3.2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81"><span class="toc-number">3.3.</span> <span class="toc-text">验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E5%AE%89%E8%A3%85"><span class="toc-number">3.4.</span> <span class="toc-text">4.1 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-%E9%85%8D%E7%BD%AE"><span class="toc-number">3.5.</span> <span class="toc-text">4.2 配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-%E4%B8%AA%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2"><span class="toc-number">4.</span> <span class="toc-text">6.个人服务器部署</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BAlinux%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%96%B0%E5%BB%BA%E7%94%A8%E6%88%B7"><span class="toc-number">4.1.</span> <span class="toc-text">为linux服务器新建用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0SSH%E4%BF%A1%E4%BB%BB"><span class="toc-number">4.2.</span> <span class="toc-text">添加SSH信任</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0id-rsa-pub"><span class="toc-number">4.3.</span> <span class="toc-text">上传本地id_rsa_pub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0Git-Bash-Here%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">4.4.</span> <span class="toc-text">本地Git Bash Here连接服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git%E4%BB%93%E5%BA%93%E4%BD%BF%E7%94%A8git-hooks%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2"><span class="toc-number">4.5.</span> <span class="toc-text">git仓库使用git-hooks自动部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0hexo%E9%85%8D%E7%BD%AE"><span class="toc-number">4.6.</span> <span class="toc-text">本地hexo配置</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li><a href="/2021/12/30/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E9%9D%92%E9%BE%99%E9%9D%A2%E6%9D%BF%E6%8B%BF%E4%BA%AC%E8%B1%86/" rel="bookmark" title="云服务器搭建青龙面板每日自动拿京豆">云服务器搭建青龙面板每日自动拿京豆</a></li><li class="active"><a href="/2022/03/23/%E5%88%A9%E7%94%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAbutterfly%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/" rel="bookmark" title="利用云服务器搭建butterfly主题博客">利用云服务器搭建butterfly主题博客</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="许申奥"
+      data-src="/images/avatar1.jpg">
+  <p class="name" itemprop="name">许申奥</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">15</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">4</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">24</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/11/14/jnylife/" title="butterfly主题美化">butterfly主题美化</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%AE%9E%E7%94%A8%E5%88%86%E4%BA%AB/" title="In 实用分享">实用分享</a>
+</div>
+
+    <span><a href="/2022/03/23/%E5%88%A9%E7%94%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAbutterfly%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/" title="利用云服务器搭建butterfly主题博客">利用云服务器搭建butterfly主题博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="In JavaScript学习笔记">JavaScript学习笔记</a>
+</div>
+
+    <span><a href="/2021/12/14/JavaScript%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6/" title="JavaScript执行机制">JavaScript执行机制</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/10/16/CSS/" title="CSS">CSS</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/10/12/helloworld/" title="helloworld">helloworld</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/10/30/CSS3/" title="CSS3">CSS3</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vue/" title="In vue">vue</a>
+</div>
+
+    <span><a href="/2022/01/02/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%91%A3/" title="Vue学习笔记④">Vue学习笔记④</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/11/15/JavaScript%E5%9F%BA%E7%A1%80/" title="JavaScript基础">JavaScript基础</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/11/15/bootstrap%E5%85%A5%E9%97%A8/" title="bootstrap入门">bootstrap入门</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%AE%9E%E7%94%A8%E5%88%86%E4%BA%AB/" title="In 实用分享">实用分享</a>
+</div>
+
+    <span><a href="/2021/12/30/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E9%9D%92%E9%BE%99%E9%9D%A2%E6%9D%BF%E6%8B%BF%E4%BA%AC%E8%B1%86/" title="云服务器搭建青龙面板每日自动拿京豆">云服务器搭建青龙面板每日自动拿京豆</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">许申奥 @ Eternal God</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/03/23/利用云服务器搭建butterfly主题博客/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

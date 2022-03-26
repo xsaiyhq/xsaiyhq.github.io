@@ -1,0 +1,722 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="XuShenao" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="XuShenao" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="XuShenao" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="JS,JavaScript" />
+
+
+<link rel="canonical" href="http://example.com/2021/11/15/JavaScript%E5%9F%BA%E7%A1%80/">
+
+
+
+  <title>
+JavaScript基础 |
+Eternal God = XuShenao</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">JavaScript基础
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2021-11-15 19:52:10">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-11-15T19:52:10+08:00">2021-11-15</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Eternal God</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/15/JavaScript%E5%9F%BA%E7%A1%80/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar1.jpg">
+    <meta itemprop="name" content="许申奥">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="XuShenao">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h2 id="js书写位置"><a href="#js书写位置" class="headerlink" title="js书写位置"></a>js书写位置</h2><h3 id="行内式-直接把代码书写在标签身上-强烈不推荐"><a href="#行内式-直接把代码书写在标签身上-强烈不推荐" class="headerlink" title="行内式-直接把代码书写在标签身上(强烈不推荐)"></a>行内式-直接把代码书写在标签身上(强烈不推荐)</h3><span id="more"></span>
+
+<p>​        + a 标签</p>
+<ul>
+<li><p>​    =&gt; 因为 a 标签本身就有行为出现</p>
+</li>
+<li><p>​    =&gt; 当我点击的时候, 需要区分你是跳转连接还是执行 JS 代码</p>
+</li>
+<li><p>​    =&gt; 在 href 属性里面书写一个 javascript: JS代码 ;</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;javascript: alert(&#x27;kick your ass&#x27;);&quot;</span>&gt;</span>click me<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>​     非 a 标签</p>
+<ul>
+<li>​    =&gt; 因为没有自己的行为, 我们需要给他加一个行为</li>
+<li>​    =&gt; 写一个 onclick 属性, 表示当点击时</li>
+<li>​    =&gt; 属性值的位置书写 JS 代码</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;javascript: alert(&#x27;hello world&#x27;) ;&quot;</span>&gt;</span>点我一下试试<span class="tag">&lt;/<span class="name">a</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+
+<p><span class="exturl" data-url="amF2YXNjcmlwdDogYWxlcnQoJ2hlbGxvIHdvcmxkJykgOw==">点我一下试试</span></p>
+<h3 id="内嵌式-把代码书写在script对内"><a href="#内嵌式-把代码书写在script对内" class="headerlink" title="内嵌式-把代码书写在script对内"></a>内嵌式-把代码书写在script对内</h3><ol>
+<li></li>
+</ol>
+<p>特点:</p>
+<p>再一个页面内可以书写无限个 script 标签</p>
+<p>会按照从上到下的顺序依次执行</p>
+<p>  理论上 script 标签可以放在页面的任何位置</p>
+<p>推荐放在 body 的末尾或者 head 的末尾</p>
+<p>  目前推荐放在 body 的末尾</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="handlebars"><span class="xml">alert(&#x27;hello world&#x27;)<span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="外链式-JS-代码"><a href="#外链式-JS-代码" class="headerlink" title="外链式 JS 代码"></a>外链式 JS 代码</h3><p>   + 把 JS 代码写在一个 .js 后缀的文件里面</p>
+<p>   + 再页面上通过 script 标签的 src 属性引入页面</p>
+<p>   + 注意: <strong>不需要任何行为, 只要打开页面就会执行</strong></p>
+<p>   + 特点:</p>
+<p>​    \1. 和内嵌式一样</p>
+<p>​    \2. 当一个 script 标签呗当作外链式使用的时候, 那么写在标签对里面的内容没有意义</p>
+<p>​     =&gt; 哪怕你写了 src 属性, 但是没有引入文件, 也不能当作内嵌式使用了</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./test.js&quot;</span>&gt;</span></span><br><span class="line">  alert(12345677)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="js的输出语法"><a href="#js的输出语法" class="headerlink" title="js的输出语法"></a>js的输出语法</h2><ol>
+<li>alert()</li>
+</ol>
+<p>​     =&gt; 以浏览器弹出层的形式展示内容</p>
+<p>​     =&gt; 小括号里面书写你要输出的内容</p>
+<ol start="2">
+<li>console.log()</li>
+</ol>
+<p>​     =&gt; 再浏览器控制台打印你要输出的内容</p>
+<p>​     =&gt; 小括号里面书写你要输出的内容</p>
+<ol start="3">
+<li>document.write()</li>
+</ol>
+<p>​     =&gt; 再页面直接写入你要输出的内容</p>
+<p>​     =&gt; 小括号里面书写你要输出的内容</p>
+<p>​     =&gt; 特殊:</p>
+<p>​      -&gt; 直接把内容输出再页面上</p>
+<p>​      -&gt; 所以可以解析标签</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/jnylife/ImgHosting/img/202111161343103.png" alt="image-20211116134308575"></p>
+<h3 id="最小公倍数"><a href="#最小公倍数" class="headerlink" title="最小公倍数"></a>最小公倍数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> a=prompt(<span class="string">&#x27;输入一个数字&#x27;</span>)</span><br><span class="line"> <span class="keyword">var</span> b=prompt(<span class="string">&#x27;在输入一个数字&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span>(a&lt;b)&#123;</span><br><span class="line"> <span class="keyword">for</span>(<span class="keyword">var</span> i=b;i&lt;=a*b;i++)&#123;</span><br><span class="line">  <span class="keyword">if</span>(i % b=== <span class="number">0</span> &amp;&amp; i % a === <span class="number">0</span>)&#123;</span><br><span class="line">	  <span class="built_in">document</span>.write(i+<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">	  <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(a&gt;=b)&#123;</span><br><span class="line">	  <span class="keyword">for</span>(<span class="keyword">var</span> i=a;i&lt;=a*b;i++)&#123;</span><br><span class="line">		  <span class="keyword">if</span>(i % b=== <span class="number">0</span> &amp;&amp; i % a === <span class="number">0</span>)&#123;</span><br><span class="line">			  <span class="built_in">document</span>.write(i+<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">			  <span class="keyword">break</span>;</span><br><span class="line">		  &#125;</span><br><span class="line">	  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="最大公约数"><a href="#最大公约数" class="headerlink" title="最大公约数"></a>最大公约数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> a=prompt(<span class="string">&#x27;输入一个数字&#x27;</span>)</span><br><span class="line"> <span class="keyword">var</span> b=prompt(<span class="string">&#x27;在输入一个数字&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span>(a&lt;b)&#123;</span><br><span class="line"> <span class="keyword">for</span>(<span class="keyword">var</span> i=a;i&gt;=<span class="number">1</span>;i--)&#123;</span><br><span class="line">  <span class="keyword">if</span>(b % i === <span class="number">0</span> &amp;&amp; a % i === <span class="number">0</span>)&#123;</span><br><span class="line">	  <span class="built_in">document</span>.write(i+<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">	  <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(a&gt;=b)&#123;</span><br><span class="line"> <span class="keyword">for</span>(<span class="keyword">var</span> i=b;i&gt;=<span class="number">1</span>;i--)&#123;</span><br><span class="line"> 		  <span class="keyword">if</span>(b % i === <span class="number">0</span> &amp;&amp; a % i === <span class="number">0</span>)&#123;</span><br><span class="line"> 			  <span class="built_in">document</span>.write(i+<span class="string">&#x27; &#x27;</span>)</span><br><span class="line"> 			  <span class="keyword">break</span>;</span><br><span class="line"> 		  &#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript函数"><a href="#JavaScript函数" class="headerlink" title="JavaScript函数"></a>JavaScript函数</h2><h3 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h3><p><img data-src="https://cdn.jsdelivr.net/gh/jnylife/ImgHosting/img/202111161750323.png" alt="image-20211116175005189"></p>
+<h3 id="函数执行"><a href="#函数执行" class="headerlink" title="函数执行"></a>函数执行</h3><p><img data-src="https://cdn.jsdelivr.net/gh/jnylife/ImgHosting/img/202111161752299.png" alt="image-20211116175239255"></p>
+<h3 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">n</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(n === <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> n * fn(n-<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://cdn.jsdelivr.net/gh/jnylife/ImgHosting/img/202111161935792.png" alt="image-20211116193514358"></p>
+<h3 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">n</span>)</span>&#123;</span><br><span class="line"><span class="keyword">if</span>(n==<span class="number">1</span> || n==<span class="number">2</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"><span class="keyword">return</span> fn(n-<span class="number">1</span>) * fn(n-<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="js作用域"><a href="#js作用域" class="headerlink" title="js作用域"></a>js作用域</h2><p>范围：全局作用域，私有作用域。</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/jnylife/ImgHosting/img/202111171716583.png" alt="image-20211117171551946"></p>
+<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><p>自己有用自己的，自己没有用父级的</p>
+<p>以此类推，到全局都没有就报错。</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/jnylife/ImgHosting/img/202111171718332.png" alt="image-20211117171833262"></p>
+<h3 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h3><p>自己给自己的赋值 ，自己没有给父级的赋值</p>
+<p>以此类推 ，到全局都没有，定义全局再赋值。</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/jnylife/ImgHosting/img/202111171720013.png" alt="image-20211117172012961"></p>
+<h2 id="对象数据类型"><a href="#对象数据类型" class="headerlink" title="对象数据类型"></a>对象数据类型</h2><p><img data-src="https://cdn.jsdelivr.net/gh/jnylife/ImgHosting/img/202111171725160.png" alt="image-20211117172555111"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj&#123;</span><br><span class="line"><span class="attr">a</span>:<span class="number">100</span>,</span><br><span class="line"><span class="attr">b</span>:<span class="literal">true</span>,</span><br><span class="line"><span class="attr">c</span>:<span class="string">&#x27;hello world&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="对象的操作"><a href="#对象的操作" class="headerlink" title="对象的操作"></a>对象的操作</h3><ol>
+<li>点语法<br>1-1. 添加一个成员<br>  =&gt; 语法: 对象名.成员名 = 值<br>1-2. 删除一个成员<br>  =&gt; 语法: delete 对象名.成员名<br>1-3. 修改一个成员<br>  =&gt; 语法: 对象名.成员名 = 值<br>  =&gt; 原先有就是修改, 原先没有就是添加<br>1-4. 查询某一个成员的值<br>  =&gt; 语法: 对象名.成员名<br>  =&gt; 当你访问一个对象里面没有的成员的时候<br>  =&gt; 会给你一个 undefined</li>
+</ol>
+<h2 id="数组数据类型"><a href="#数组数据类型" class="headerlink" title="数组数据类型"></a>数组数据类型</h2><p>var arr =[ 100 ]</p>
+<ol start="2">
+<li>数组关联语法<pre><code> 1-1. 添加一个成员
+   =&gt; 语法: 对象名[&#39;成员名&#39;] = 值
+ 1-2. 删除一个成员
+   =&gt; 语法: delete 对象名[&#39;成员名&#39;]
+ 1-3. 修改一个成员
+   =&gt; 语法: 对象名[&#39;成员名&#39;] = 值
+   =&gt; 原先有就是修改, 原先没有就是添加
+ 1-4. 获取一个成员的值
+   =&gt; 语法: 对象名[&#39;成员名&#39;] 
+</code></pre>
+   arr.length获取长度   arr.length=3 设置数组长度<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2>   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr[<span class="number">9</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">8</span>]</span><br><span class="line"><span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;arr.length-<span class="number">1</span>;j++)&#123;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span> ;i&lt;arr.length-<span class="number">1</span>-j;i++)</span><br><span class="line">  <span class="keyword">if</span> (arr[i+<span class="number">1</span>]&lt;arr[i])&#123;</span><br><span class="line">    <span class="keyword">var</span> temp=arr[i]</span><br><span class="line">    arr[i]=arr[i+<span class="number">1</span>]</span><br><span class="line">    arr[i+<span class="number">1</span>]=temp  </span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+   arr[9,2,4,5,3,6,7,1,8]  =&gt; arr[1,2,3,4,5,6,7,8,9]</li>
+</ol>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">9</span>, <span class="number">2</span>, <span class="number">6</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">1</span>]</span><br><span class="line">   <span class="comment">// 2. 重复执行步骤一</span></span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; arr.length - <span class="number">1</span>; j++) &#123;</span><br><span class="line">     <span class="keyword">var</span> minIndex = j</span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">var</span> i = j + <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">       <span class="keyword">if</span> (arr[i] &lt; arr[minIndex]) &#123;</span><br><span class="line">         minIndex = i</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">var</span> tmp = arr[j]</span><br><span class="line">     arr[j] = arr[minIndex]</span><br><span class="line">     arr[minIndex] = tmp</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="built_in">console</span>.log(arr)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>arr[9,2,4,5,3,6,7,1,8]  =&gt; arr[1,2,3,4,5,6,7,8,9]</p>
+<h2 id="数组常用方法"><a href="#数组常用方法" class="headerlink" title="数组常用方法"></a>数组常用方法</h2><pre><code>+ 就是 JS 自带一些操作数组得方法
++ 数组常用方法得使用格式, 必须是 数组.xxx()
++ 数组和伪数组得区别
+  =&gt; length 和 索引都一样, 循环遍历都一样
+  =&gt; 长得也一样
+  =&gt; 唯独数组常用方法, 伪数组同不了
+</code></pre>
+<ol>
+<li>push()</li>
+</ol>
+<pre><code>=&gt; 语法: 数组.push(数据1, 数据2, 数据3, ...)
+=&gt; 作用: 把所有得参数按照顺序追加到数组得末尾位置
+=&gt; 返回值: 追加以后数组得长度
+=&gt; 直接操作原始数组
+</code></pre>
+<ol start="2">
+<li>pop()</li>
+</ol>
+<pre><code>=&gt; 语法: 数组.pop()
+=&gt; 作用: 删除数组得最后一个数据
+=&gt; 返回值: 被删除得数据
+=&gt; 直接操作原始数组
+</code></pre>
+<ol start="3">
+<li>unshift()</li>
+</ol>
+<pre><code>=&gt; 语法: 数组.unshift(数据1, 数据2, 数据3, ...)
+=&gt; 作用: 从数组得最前面插入一些数据
+=&gt; 返回值: 插入后得数组长度
+=&gt; 直接操作原始数组
+</code></pre>
+<ol start="4">
+<li>shift()</li>
+</ol>
+<pre><code>=&gt; 语法: 数组.shift()
+=&gt; 作用: 删除数组得最前面一个数据
+=&gt; 返回值: 被删除得数据
+=&gt; 直接操作原始数组
+</code></pre>
+<p>*/</p>
+<p>// 1. push()<br>// var arr = [‘hello’, ‘world’, ‘你好’, ‘世界’]<br>// var res = arr.push(‘新来的’, ‘新来的2’, [10, 20])<br>// console.log(res)<br>// console.log(arr)</p>
+<p>// 2. pop()<br>// var arr = [‘hello’, ‘world’, ‘你好’, ‘世界’]<br>// var res = arr.pop()<br>// console.log(res)<br>// console.log(arr)</p>
+<p>// 3. unshift()<br>// var arr = [‘hello’, ‘world’, ‘你好’, ‘世界’]<br>// var res = arr.unshift(‘新来的’, ‘新来的2’)<br>// console.log(res)<br>// console.log(arr)</p>
+<p>// 4. shift()<br>// var arr = [‘hello’, ‘world’, ‘你好’, ‘世界’]<br>// var res = arr.shift()<br>// console.log(res)<br>// console.log(arr)</p>
+<ol start="5">
+<li><p>reverse()</p>
+<pre><code> =&gt; 语法: 数组.reverse()
+ =&gt; 作用: 反转数组
+ =&gt; 返回值: 反转后得数组
+ =&gt; 直接操作原始数组
+</code></pre>
+<ol start="6">
+<li>sort()</li>
+</ol>
+<pre><code> =&gt; 语法:
+   1. arr.sort()
+     -&gt; 按照每一个数据中得每一位数据得 ASCII 码进行排列
+   2. arr.sort(function (a, b) &#123; return a - b &#125;)
+     -&gt; 升序排列
+   3. arr.sort(function (a, b) &#123; return b - a &#125;)
+     -&gt; 降序排列
+ =&gt; 作用: 数组排序
+ =&gt; 返回值: 排序后得数组
+ =&gt; 直接操作原始数组
+</code></pre>
+<ol start="7">
+<li>splice()</li>
+</ol>
+<pre><code> =&gt; 语法:
+   1. 数组.splice(开始索引, 多少个)
+     -&gt; 从开始索引, 截取多少个
+     -&gt; 第二个参数可以不写, 直接到末尾
+   2. 数组.splice(开始索引, 多少个, 替换数据1, 替换数据2, 替换数据3, ...)
+     -&gt; 把替换数据按照顺序插入到你截取得位置
+     -&gt; 注意: **从哪个索引开始删除, 替换数据得第一个就插入哪个位置**
+ =&gt; 作用: 有两个
+   1. 截取数组
+   2. 替换新内容
+ =&gt; 返回值: 一定是一个数组
+   -&gt; 如果你截取多个数据, 数组里面有多个
+   -&gt; 如果你截取一个数据, 数组里面有一个
+   -&gt; 如果你一个都不截取, 那么是一个空数组
+ =&gt; 直接操作原始数组
+</code></pre>
+<ol start="8">
+<li>concat()</li>
+</ol>
+<pre><code> =&gt; 语法: 数组.concat(数组1, 数据2, ...)
+ =&gt; 作用:
+   -&gt; 如果参数是数组, 那么把数组拆开, 里面每一项追加到原数组后面
+   -&gt; 如果参数数数据, 那么直接追加
+ =&gt; 返回值: 追加好得数组
+ =&gt; 不改变原始数组
+</code></pre>
+<ol start="9">
+<li>slice()</li>
+</ol>
+<pre><code> =&gt; 语法:
+   1. 数组.slice(开始索引, 结束索引) - 包前不包后
+     -&gt; 第一个参数可以不写, 表示从头
+     -&gt; 第二个参数可以不写, 表示到尾
+   2. 数组.slice(开始索引, 结束索引) - 包前不包后
+     -&gt; 参数可以写一个负整数
+     -&gt; 当你书写了一个负整数以后, 表示 length + 负整数
+ =&gt; 作用: 获取数组里面得某些数据
+ =&gt; 返回值: 一个数组
+   -&gt; 如果你获取多个数据, 数组里面有多个
+   -&gt; 如果你获取一个数据, 那么数组里面有一个
+   -&gt; 如果你一个都不获取, 那么是个空数组
+ =&gt; 不改变原始数组
+</code></pre>
+<ol start="10">
+<li>join()</li>
+</ol>
+<pre><code> =&gt; 语法: 数组.join(&#39;连接符号&#39;)
+   -&gt; 不传递, 是按照 逗号(,) 连接
+   -&gt; 你传递什么, 按照什么连接
+ =&gt; 作用: 把数组里面得每一个数据使用连接符号连接在一起
+ =&gt; 返回值: 是一个连接好得内容, 是一个 String 类型
+</code></pre>
+<p> */</p>
+<p> // 5. reverse()<br> // var arr = [‘hello’, ‘world’, ‘你好’, ‘世界’]<br> // var res = arr.reverse()<br> // console.log(res)<br> // console.log(arr)</p>
+<p> // 6. sort()<br> // var arr = [1, 11, 33, 26, 51, 19, 32, 27, 15, 100]<br> // var res = arr.sort()<br> // console.log(res)<br> // console.log(arr)</p>
+<p> // var res = arr.sort(function (a, b) { return a - b })<br> // console.log(res)<br> // console.log(arr)</p>
+<p> // var res = arr.sort(function (a, b) { return b - a })<br> // console.log(res)<br> // console.log(arr)</p>
+<p> // 7. splice()<br> // var arr = [‘hello’, ‘world’, ‘你好’, ‘世界’]<br> // var res = arr.splice(1, 2)<br> // console.log(‘res: ‘, res)<br> // console.log(‘arr: ‘, arr)</p>
+<p> // var res = arr.splice(1, 0, ‘新来的’, ‘新来的2’)<br> // console.log(‘res: ‘, res)<br> // console.log(‘arr: ‘, arr)<br> // [‘hello’, ‘world’, ‘新来的’, ‘你好’, ‘世界’]<br> // [‘hello’, ‘新来的’, ‘world’, ‘你好’, ‘世界’]</p>
+<p> // 8. concat()<br> // var arr = [‘hello’, ‘world’, ‘你好’, ‘世界’]<br> // var res = arr.concat([10, 20], [30, 40], 100)<br> // console.log(res)<br> // console.log(arr)</p>
+<p> // 9. slice()<br> // var arr = [‘hello’, ‘world’, ‘你好’, ‘世界’]<br> // var res = arr.slice(1, 3)<br> // console.log(‘res : ‘, res)<br> // console.log(‘arr : ‘, arr)</p>
+<p> // 因为 length 是 4, -2 得位置实际上相当于 4 + -2, 2<br> // var res2 = arr.slice(1, -1)<br> // console.log(‘res2 : ‘, res2)<br> // console.log(‘arr : ‘, arr)</p>
+<p> // 10. join()<br> var arr = [‘hello’, ‘world’, ‘你好’, ‘世界’]<br> var res = arr.join(‘abcd’)<br> console.log(res)<br> console.log(arr)</p>
+</li>
+</ol>
+
+      <div class="tags">
+          <a href="/tags/JS/" rel="tag"><i class="ic i-tag"></i> JS</a>
+          <a href="/tags/JavaScript/" rel="tag"><i class="ic i-tag"></i> JavaScript</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2022-03-26 10:56:43" itemprop="dateModified" datetime="2022-03-26T10:56:43+08:00">2022-03-26</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="许申奥 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="许申奥 Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="许申奥 PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>许申奥 <i class="ic i-at"><em>@</em></i>XuShenao
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2021/11/15/JavaScript%E5%9F%BA%E7%A1%80/" title="JavaScript基础">http://example.com/2021/11/15/JavaScript基础/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2021/11/15/bootstrap%E5%85%A5%E9%97%A8/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeu7txpzj20zk0m81kx.jpg" title="bootstrap入门">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>bootstrap入门</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2021/12/10/ES6/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;jnylife&#x2F;ImgHosting&#x2F;&#x2F;img&#x2F;202112101507292.jpg" title="ES6+">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> ES6</span>
+  <h3>ES6+</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript"><span class="toc-number">1.</span> <span class="toc-text">JavaScript</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#js%E4%B9%A6%E5%86%99%E4%BD%8D%E7%BD%AE"><span class="toc-number">1.1.</span> <span class="toc-text">js书写位置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E5%BC%8F-%E7%9B%B4%E6%8E%A5%E6%8A%8A%E4%BB%A3%E7%A0%81%E4%B9%A6%E5%86%99%E5%9C%A8%E6%A0%87%E7%AD%BE%E8%BA%AB%E4%B8%8A-%E5%BC%BA%E7%83%88%E4%B8%8D%E6%8E%A8%E8%8D%90"><span class="toc-number">1.1.1.</span> <span class="toc-text">行内式-直接把代码书写在标签身上(强烈不推荐)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%B5%8C%E5%BC%8F-%E6%8A%8A%E4%BB%A3%E7%A0%81%E4%B9%A6%E5%86%99%E5%9C%A8script%E5%AF%B9%E5%86%85"><span class="toc-number">1.1.2.</span> <span class="toc-text">内嵌式-把代码书写在script对内</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E9%93%BE%E5%BC%8F-JS-%E4%BB%A3%E7%A0%81"><span class="toc-number">1.1.3.</span> <span class="toc-text">外链式 JS 代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#js%E7%9A%84%E8%BE%93%E5%87%BA%E8%AF%AD%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">js的输出语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0"><span class="toc-number">1.2.1.</span> <span class="toc-text">最小公倍数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0"><span class="toc-number">1.2.2.</span> <span class="toc-text">最大公约数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript%E5%87%BD%E6%95%B0"><span class="toc-number">1.3.</span> <span class="toc-text">JavaScript函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89"><span class="toc-number">1.3.1.</span> <span class="toc-text">函数定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E6%89%A7%E8%A1%8C"><span class="toc-number">1.3.2.</span> <span class="toc-text">函数执行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0"><span class="toc-number">1.3.3.</span> <span class="toc-text">递归函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97"><span class="toc-number">1.3.4.</span> <span class="toc-text">斐波那契数列</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#js%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.4.</span> <span class="toc-text">js作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE"><span class="toc-number">1.4.1.</span> <span class="toc-text">访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC"><span class="toc-number">1.4.2.</span> <span class="toc-text">赋值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.5.</span> <span class="toc-text">对象数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">1.5.1.</span> <span class="toc-text">对象的操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.6.</span> <span class="toc-text">数组数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="toc-number">1.7.</span> <span class="toc-text">冒泡排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="toc-number">1.8.</span> <span class="toc-text">选择排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">1.9.</span> <span class="toc-text">数组常用方法</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="许申奥"
+      data-src="/images/avatar1.jpg">
+  <p class="name" itemprop="name">许申奥</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">15</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">4</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">24</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2021/11/15/bootstrap%E5%85%A5%E9%97%A8/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2021/12/10/ES6/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/11/14/jnylife/" title="butterfly主题美化">butterfly主题美化</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="In JavaScript学习笔记">JavaScript学习笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ES6/" title="In ES6">ES6</a>
+</div>
+
+    <span><a href="/2021/12/10/ES6%E2%91%A1/" title="ES6②">ES6②</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vue/" title="In vue">vue</a>
+</div>
+
+    <span><a href="/2021/12/23/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%91%A2/" title="Vue学习笔记③">Vue学习笔记③</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/11/15/JavaScript%E5%9F%BA%E7%A1%80/" title="JavaScript基础">JavaScript基础</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/11/15/bootstrap%E5%85%A5%E9%97%A8/" title="bootstrap入门">bootstrap入门</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/10/12/helloworld/" title="helloworld">helloworld</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/10/16/CSS/" title="CSS">CSS</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/10/28/html/" title="html5">html5</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%AE%9E%E7%94%A8%E5%88%86%E4%BA%AB/" title="In 实用分享">实用分享</a>
+</div>
+
+    <span><a href="/2022/03/23/%E5%88%A9%E7%94%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAbutterfly%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/" title="利用云服务器搭建butterfly主题博客">利用云服务器搭建butterfly主题博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/10/30/CSS3/" title="CSS3">CSS3</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">许申奥 @ Eternal God</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/11/15/JavaScript基础/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
